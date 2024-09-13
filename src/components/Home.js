@@ -113,7 +113,7 @@ function Home() {
                         <li class="list-group-item "><strong>Plot starts from:</strong> ${currentProperty?.plotPrice}</li>
                         <li class="list-group-item "><strong>Plot Size:</strong> ${currentProperty?.plotsize}</li>
                         <li class="list-group-item "><strong>Flat price starts from:</strong> ${currentProperty?.flatPrice}</li>
-                        <li class="list-group-item "><strong>Flat Size:</strong> ${property.flatSize}</li>
+                        <li class="list-group-item "><strong>Flat Size:</strong> ${currentProperty?.flatSize}</li>
                         <li className="list-group-item">Location: <a href={currentProperty?.mapLink} target="_blank" rel="noopener noreferrer">{currentProperty?.location}</a></li>
                         <li className="list-group-item">Contact: {currentProperty?.contact}</li>
                     </ul>

@@ -12,13 +12,13 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/about" onClick={() => {document.querySelector('.navbar-collapse').classList.remove('show');}}>About Us</Link>
+              <Link className="nav-link" to="/about" onClick={() => { document.querySelector('.navbar-collapse').classList.remove('show'); }}>About Us</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/our-team" onClick={() => {document.querySelector('.navbar-collapse').classList.remove('show');}}>Our Team</Link>
+              <Link className="nav-link" to="/our-team" onClick={() => { document.querySelector('.navbar-collapse').classList.remove('show'); }}>Our Team</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact" onClick={() => {document.querySelector('.navbar-collapse').classList.remove('show');}}>Contact Us</Link>
+              <Link className="nav-link" to="/contact" onClick={() => { document.querySelector('.navbar-collapse').classList.remove('show'); }}>Contact Us</Link>
             </li>
           </ul>
         </div>
