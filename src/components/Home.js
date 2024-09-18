@@ -73,8 +73,9 @@ function Home() {
                                 <div className="card mb-4">
                                     <img src={property.imgSrc[0]} className="card-img-top h-50 img-fluid" alt={property.title} />
                                     <div className="card-body">
-                                        <h5 className="card-title">{property.title}</h5>
-                                        <p className="card-text">{property.description}</p>
+                                        <h5 className="card-title text-center">{property.title}</h5>
+                                        <p className="card-text text-center">  {property.description.split(' ').slice(0, 50).join(' ')}...
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -85,7 +86,7 @@ function Home() {
 
             <Modal show={showComingSoon} onHide={() => setShowComingSoon(false)} centered>
                 <Modal.Header closeButton>
-                    <Modal.Title>Coming Soon</Modal.Title>
+                    <Modal.Title className='text-center'>Coming Soon</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>This project is coming soon. Stay tuned for updates!</Modal.Body>
                 <Modal.Footer>
@@ -111,10 +112,12 @@ function Home() {
                     )}
                     <ul className="list-group list-group-flush">
                         <li class="list-group-item "><strong>Plot starts from:</strong> ${currentProperty?.plotPrice}</li>
-                        <li class="list-group-item "><strong>Plot Size:</strong> ${currentProperty?.plotsize}</li>
-                        <li class="list-group-item "><strong>Flat price starts from:</strong> ${currentProperty?.flatPrice}</li>
-                        <li class="list-group-item "><strong>Flat Size:</strong> ${currentProperty?.flatSize}</li>
+                        <li class="list-group-item "><strong>Plot Size:</strong> {currentProperty?.plotsize}</li>
+                        <li class="list-group-item "><strong>Flat price starts from:</strong> {currentProperty?.flatPrice} </li>
+                        <li class="list-group-item "><strong>Flat Size:</strong> {currentProperty?.flatSize}</li>
                         <li className="list-group-item">Location: <a href={currentProperty?.mapLink} target="_blank" rel="noopener noreferrer">{currentProperty?.location}</a></li>
+                        <li class="list-group-item "><strong>Description</strong> {currentProperty?.description}</li>
+
                         <li className="list-group-item">Contact: {currentProperty?.contact}</li>
                     </ul>
                 </Modal.Body>
